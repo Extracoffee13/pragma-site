@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The 40-Year Operator, on Agents · PRAGMA</title>
+<meta name="description" content="A 40-year national signage operator runs its weekly client-deck pipeline on agents. Hours of designer work, across dozens of designers, now runs in minutes. The system PRAGMA installs on clients was built here first.">
+<meta name="theme-color" content="#0A0A0A">
+<link rel="canonical" href="https://prag-ma.ai/thinking/the-40-year-operator-on-agents/">
+
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://prag-ma.ai/thinking/the-40-year-operator-on-agents/">
+<meta property="og:title" content="The 40-Year Operator, on Agents">
+<meta property="og:description" content="A 40-year national signage operator runs its weekly client-deck pipeline on agents. Hours of designer work, across dozens, now runs in minutes. The system PRAGMA installs was built here first.">
+<meta property="og:image" content="https://prag-ma.ai/og-mark.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="PRAGMA · The 40-Year Operator, on Agents.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The 40-Year Operator, on Agents · PRAGMA">
+<meta name="twitter:image" content="https://prag-ma.ai/og-mark.png">
+
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 240'%3E%3Crect width='240' height='240' fill='%230A0A0A'/%3E%3Ccircle cx='120' cy='120' r='89' fill='none' stroke='%231FE07E' stroke-width='14'/%3E%3Ctext x='120' y='154' text-anchor='middle' font-family='monospace' font-size='100' font-weight='700' fill='%231FE07E' letter-spacing='-4'%3E%26gt%3B_%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800;900&family=Fraunces:opsz,wght@9..144,300..700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "The 40-Year Operator, on Agents",
+  "url": "https://prag-ma.ai/thinking/the-40-year-operator-on-agents/",
+  "description": "A 40-year national signage operator runs its weekly client-deck pipeline on agents. Hours of designer work, across dozens, now runs in minutes. The system PRAGMA installs was built here first.",
+  "datePublished": "2026-05-19",
+  "author": { "@type": "Organization", "name": "PRAGMA", "url": "https://prag-ma.ai/" },
+  "publisher": { "@type": "Organization", "name": "PRAGMA", "url": "https://prag-ma.ai/", "logo": { "@type": "ImageObject", "url": "https://prag-ma.ai/og-mark.png" } },
+  "image": "https://prag-ma.ai/og-mark.png",
+  "isPartOf": { "@id": "https://prag-ma.ai/#website" },
+  "about": [
+    { "@type": "Thing", "name": "Frontier Firm operating model" },
+    { "@type": "Thing", "name": "Multi-agent AI systems" },
+    { "@type": "Thing", "name": "Operator-built deployment" }
+  ]
+}
+</script>
+
+<style>
+:root {
+  --void: #0A0A0A; --void-2: #0E0E0E; --void-3: #141414;
+  --signal: #1FE07E; --signal-2: #19C46D;
+  --signal-dim: rgba(31,224,126,0.08); --signal-line: rgba(31,224,126,0.18);
+  --output: #FFFFFF; --output-65: rgba(255,255,255,0.65);
+  --output-45: rgba(255,255,255,0.45); --output-30: rgba(255,255,255,0.30);
+  --output-12: rgba(255,255,255,0.12); --output-04: rgba(255,255,255,0.04);
+  --f-sans: 'Inter', system-ui, sans-serif;
+  --f-serif: 'Fraunces', serif;
+  --f-mono: 'JetBrains Mono', monospace;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--void); color: var(--output);
+  font-family: var(--f-sans); font-size: 17px; line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; text-decoration: none; }
+a.inline { color: var(--signal); border-bottom: 1px solid var(--signal-line); transition: border-color 200ms ease; }
+a.inline:hover { border-bottom-color: var(--signal); }
+::selection { background: var(--signal); color: var(--void); }
+
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  padding: 22px 56px; background: rgba(10,10,10,0.72);
+  backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid var(--output-04);
+  display: flex; justify-content: space-between; align-items: center;
+}
+.nav-left { display: flex; align-items: center; gap: 13px; }
+.nav-wordmark { font-size: 20px; font-weight: 900; letter-spacing: -0.03em; }
+.nav-wordmark .dot { color: var(--signal); }
+.nav-right { display: flex; gap: 34px; align-items: center; }
+.nav-link { font-family: var(--f-mono); font-size: 12px; color: var(--output-45); letter-spacing: 0.05em; }
+.nav-link:hover { color: var(--output); }
+.nav-cta {
+  font-family: var(--f-mono); font-size: 12px; color: var(--signal);
+  padding: 9px 21px; border: 1px solid var(--signal-line); border-radius: 100px; letter-spacing: 0.05em;
+}
+.nav-cta::before { content: '>_ '; opacity: 0.7; }
+.nav-cta:hover { background: var(--signal-dim); }
+@media (max-width: 720px) { nav { padding: 18px 24px; } .nav-link:not(.nav-cta) { display: none; } }
+
+/* ── ARTICLE LAYOUT ── */
+.hero-motion {
+  width: 100%; max-width: 1200px;
+  margin: 110px auto 0; padding: 0 24px;
+  aspect-ratio: 1200 / 630;
+}
+.hero-motion svg { width: 100%; height: 100%; display: block; border-radius: 13px; overflow: hidden; }
+
+article {
+  max-width: 760px; margin: 0 auto;
+  padding: 55px 56px 89px;
+}
+.eyebrow {
+  font-family: var(--f-mono); font-size: 11px;
+  color: var(--signal); letter-spacing: 0.25em; text-transform: uppercase;
+  margin-bottom: 34px;
+}
+.eyebrow::before { content: '>_ '; opacity: 0.6; margin-right: 4px; }
+
+h1 {
+  font-size: clamp(40px, 6vw, 76px); font-weight: 900;
+  letter-spacing: -0.04em; line-height: 1.02; margin-bottom: 34px;
+}
+h1 .accent { color: var(--signal); }
+
+.dek {
+  font-family: var(--f-serif); font-size: clamp(20px, 2.6vw, 28px);
+  font-weight: 300; line-height: 1.45; color: var(--output-65);
+  font-style: italic; margin-bottom: 55px;
+  padding-left: 28px; border-left: 2px solid var(--signal);
+}
+
+h2 {
+  font-size: clamp(28px, 3.5vw, 42px); font-weight: 800;
+  letter-spacing: -0.025em; line-height: 1.15;
+  margin: 55px 0 21px;
+}
+h2 .accent { color: var(--signal); }
+
+p {
+  font-size: 17px; line-height: 1.75; color: var(--output-65);
+  margin-bottom: 21px; font-weight: 300;
+}
+p strong { color: var(--output); font-weight: 500; }
+p .term { color: var(--signal); font-weight: 500; }
+
+.pullquote {
+  font-family: var(--f-serif); font-size: clamp(24px, 3.5vw, 36px);
+  font-weight: 400; font-style: italic; line-height: 1.3;
+  color: var(--output); margin: 55px 0;
+  padding-left: 34px; border-left: 2px solid var(--signal);
+  max-width: 720px;
+}
+.pullquote .accent { color: var(--signal); font-style: normal; }
+
+.numberline {
+  display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px;
+  margin: 55px 0;
+}
+.numberline-card {
+  padding: 34px 28px;
+  background: var(--void-3); border: 1px solid var(--output-04);
+  border-radius: 16px;
+}
+.numberline-card .scale {
+  font-family: var(--f-mono); font-size: 11px;
+  color: var(--signal); letter-spacing: 0.18em;
+  text-transform: uppercase; margin-bottom: 13px;
+}
+.numberline-card .stat {
+  font-size: clamp(28px, 3.5vw, 40px); font-weight: 900;
+  letter-spacing: -0.03em; line-height: 1.05; margin-bottom: 13px;
+}
+.numberline-card .stat .accent { color: var(--signal); }
+.numberline-card .desc {
+  font-size: 13.5px; color: var(--output-65);
+  line-height: 1.55; font-weight: 300;
+}
+@media (max-width: 720px) { .numberline { grid-template-columns: 1fr; } }
+
+.bullets { list-style: none; padding: 0; margin: 21px 0 34px; }
+.bullets li {
+  position: relative; padding-left: 28px; margin-bottom: 14px;
+  font-size: 17px; line-height: 1.65; color: var(--output-65); font-weight: 300;
+}
+.bullets li::before {
+  content: '>_'; position: absolute; left: 0; top: 0;
+  font-family: var(--f-mono); font-size: 12px; color: var(--signal);
+  font-weight: 700; opacity: 0.7;
+}
+.bullets li strong { color: var(--output); font-weight: 500; }
+
+.callout {
+  margin: 34px 0; padding: 28px 34px;
+  background: var(--signal-dim); border-left: 2px solid var(--signal);
+  border-radius: 4px;
+}
+.callout-tag {
+  font-family: var(--f-mono); font-size: 10px;
+  color: var(--signal); letter-spacing: 0.2em; text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.callout-body {
+  font-family: var(--f-serif); font-size: 19px; line-height: 1.5;
+  color: var(--output); font-style: italic;
+}
+
+.author-block {
+  display: flex; gap: 21px; align-items: flex-start;
+  margin: 89px 0 34px; padding: 34px 0;
+  border-top: 1px solid var(--output-04);
+  border-bottom: 1px solid var(--output-04);
+}
+.author-mark {
+  font-family: var(--f-mono); font-size: 28px; font-weight: 700;
+  color: var(--signal); flex-shrink: 0;
+}
+.author-name { font-size: 16px; font-weight: 700; letter-spacing: -0.01em; margin-bottom: 4px; }
+.author-role {
+  font-family: var(--f-mono); font-size: 11px;
+  color: var(--signal); letter-spacing: 0.15em; text-transform: uppercase;
+  margin-bottom: 13px;
+}
+.author-bio { font-size: 14px; color: var(--output-65); line-height: 1.6; font-weight: 300; }
+
+.cta-footer {
+  margin-top: 55px; padding: 55px 0; text-align: center;
+  border-top: 1px solid var(--output-04);
+}
+.cta-footer h3 {
+  font-size: clamp(28px, 4vw, 42px); font-weight: 800;
+  letter-spacing: -0.02em; margin-bottom: 21px;
+}
+.cta-footer h3 .accent { color: var(--signal); }
+.cta-primary {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: var(--signal); color: var(--void);
+  padding: 22px 56px; border-radius: 100px;
+  font-size: 16px; font-weight: 700;
+  transition: transform 200ms ease, background 200ms ease;
+}
+.cta-primary::after { content: '→'; transition: transform 200ms ease; }
+.cta-primary:hover { background: var(--signal-2); transform: translateY(-1px); }
+.cta-primary:hover::after { transform: translateX(4px); }
+
+footer {
+  padding: 34px 56px;
+  border-top: 1px solid var(--output-04);
+  text-align: center;
+  font-family: var(--f-mono); font-size: 11px; color: var(--output-30);
+  letter-spacing: 0.12em;
+}
+footer .dot { color: var(--signal); }
+
+@media (max-width: 720px) {
+  .hero-motion { margin-top: 88px; padding: 0 16px; }
+  article { padding: 34px 24px 55px; }
+  footer { padding: 24px; }
+}
+
+/* ── HERO MOTION GRAPHIC ── */
+/* Per PRAGMA blog motion-graphic style spec v1.1 (2026-05-19) */
+/* Total cycle: 5.0s. Command reveals 0–22% via clip-path. Holds + blink 22–46%. Fully fades 46–50%. */
+/* Title rises in 52–60%, holds 60–92%, fades 92–100%. Command + title never co-visible. */
+
+.pmg-bg { fill: #0A0A0A; }
+.pmg-glow { fill: url(#pmgGlow); }
+@keyframes pmgDrift {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(-40px, 60px); }
+}
+.pmg-glow-wrap { animation: pmgDrift 60s ease-in-out infinite; transform-origin: center; }
+
+.pmg-cmd-group {
+  -webkit-clip-path: inset(0 100% 0 0);
+  clip-path: inset(0 100% 0 0);
+  opacity: 0;
+  animation: pmgCmdLifecycle 5s infinite;
+}
+@keyframes pmgCmdLifecycle {
+  0%   { -webkit-clip-path: inset(0 100% 0 0); clip-path: inset(0 100% 0 0); opacity: 1; }
+  4%   { opacity: 1; }
+  22%  { -webkit-clip-path: inset(0 0 0 0); clip-path: inset(0 0 0 0); opacity: 1; }
+  46%  { -webkit-clip-path: inset(0 0 0 0); clip-path: inset(0 0 0 0); opacity: 1; }
+  50%  { -webkit-clip-path: inset(0 0 0 0); clip-path: inset(0 0 0 0); opacity: 0; }
+  100% { opacity: 0; }
+}
+
+.pmg-cmd-text {
+  font-family: 'JetBrains Mono', monospace; font-weight: 700;
+  font-size: 56px; fill: #1FE07E; letter-spacing: -1px;
+}
+
+.pmg-cursor {
+  font-family: 'JetBrains Mono', monospace; font-weight: 700;
+  font-size: 56px; fill: #1FE07E;
+  animation: pmgCursorLifecycle 5s infinite;
+}
+@keyframes pmgCursorLifecycle {
+  0%, 21%   { opacity: 0; }                  /* hidden while typing reveals */
+  22%, 26%  { opacity: 1; }                  /* blink on */
+  27%, 30%  { opacity: 0; }                  /* blink off */
+  31%, 35%  { opacity: 1; }
+  36%, 39%  { opacity: 0; }
+  40%, 44%  { opacity: 1; }
+  45%, 50%  { opacity: 0; }                  /* gone for title phase */
+  100%      { opacity: 0; }
+}
+
+.pmg-title-group {
+  opacity: 0;
+  animation: pmgTitleLifecycle 5s infinite;
+}
+@keyframes pmgTitleLifecycle {
+  0%, 50%   { opacity: 0; }
+  60%       { opacity: 1; }
+  92%       { opacity: 1; }
+  100%      { opacity: 0; }
+}
+
+.pmg-title {
+  font-family: 'Inter', sans-serif; font-weight: 900;
+  letter-spacing: -3px; fill: #FFFFFF;
+}
+.pmg-title .accent { fill: #1FE07E; }
+
+.pmg-eyebrow {
+  font-family: 'JetBrains Mono', monospace; font-weight: 500; font-size: 14px;
+  fill: rgba(31,224,126,0.65); letter-spacing: 3.5px;
+}
+
+/* Reduce motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .pmg-cmd-group, .pmg-title-group, .pmg-cursor { animation: none; opacity: 1; -webkit-clip-path: none; clip-path: none; }
+  .pmg-glow-wrap { animation: none; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-left">
+    <svg width="28" height="28" viewBox="0 0 240 240" aria-hidden="true">
+      <circle cx="120" cy="120" r="89" fill="none" stroke="#1FE07E" stroke-width="9"/>
+      <text x="120" y="148" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="86" font-weight="700" fill="#1FE07E" letter-spacing="-3">&gt;_</text>
+    </svg>
+    <div class="nav-wordmark">PRAGMA<span class="dot">.</span></div>
+  </a>
+  <div class="nav-right">
+    <a href="/the-operating-system/" class="nav-link">the OS</a>
+    <a href="/how-it-works/" class="nav-link">how it works</a>
+    <a href="/offerings/" class="nav-link">what we deliver</a>
+    <a href="/trust/" class="nav-link">trust</a>
+    <a href="/thinking/" class="nav-link">thinking</a>
+    <a href="/about/" class="nav-link">about</a>
+    <a href="/apply/" class="nav-cta">apply</a>
+  </div>
+</nav>
+
+<!-- ══════════ HERO MOTION GRAPHIC ══════════ -->
+<div class="hero-motion" aria-label="PRAGMA · The 40-Year Operator, on Agents">
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" role="img">
+  <defs>
+    <radialGradient id="pmgGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1FE07E" stop-opacity="0.07"/>
+      <stop offset="70%" stop-color="#1FE07E" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect class="pmg-bg" width="1200" height="630"/>
+  <g class="pmg-glow-wrap">
+    <circle class="pmg-glow" cx="1050" cy="80" r="380"/>
+  </g>
+
+  <!-- Typed command: > run --proof=brand9 (clip-path left-to-right reveal) -->
+  <g class="pmg-cmd-group">
+    <text class="pmg-cmd-text" x="100" y="265">&gt; run --proof=brand9</text>
+  </g>
+  <text class="pmg-cursor" x="775" y="265">_</text>
+
+  <!-- Output title (two lines, same baseline as command — replaces it in space) -->
+  <g class="pmg-title-group">
+    <text class="pmg-title" x="100" y="265" font-size="92">The 40-Year Operator,</text>
+    <text class="pmg-title" x="100" y="395" font-size="92">on <tspan class="accent">Agents.</tspan></text>
+  </g>
+
+  <!-- Eyebrow line (always visible) -->
+  <text class="pmg-eyebrow" x="100" y="560">&gt;_ THINKING · PRAGMA · 2026</text>
+</svg>
+</div>
+
+<!-- ══════════ ARTICLE BODY ══════════ -->
+<article>
+  <div class="eyebrow">Operator proof · case study</div>
+  <h1>Hours of work each week, across dozens of designers, <span class="accent">now runs in minutes.</span></h1>
+
+  <p class="dek">
+    PRAGMA was built inside a 40-year-old signage operator. The system installed on PRAGMA clients was running here first — turning a weekly proof-deck pipeline that used to take hours of designer work into a Python run.
+  </p>
+
+  <h2>The 40-year backdrop</h2>
+  <p>
+    <a href="https://brand9signs.com" class="inline" rel="noopener">Brand 9 Signs</a> was founded in 1986 out of a single van in Jacksonville, Florida. Four decades later it operates as a national signage business — design, fabrication, installation, and maintenance for homebuilders, government agencies, military bases, universities, and Fortune 500 campuses across the country. The shop has carried three generations of operating discipline and a customer base that doesn't churn. That kind of business doesn't get disrupted by a slide deck; it gets re-engineered from inside its own production loop.
+  </p>
+  <p>
+    Brand 9 Signs is a Hartley Capital company. PRAGMA — also a Hartley Capital company — was built around what happened next.
+  </p>
+
+  <h2>The problem (pre-DeckForge)</h2>
+  <p>
+    A national homebuilder engagement runs ~16 active communities at any given time. Each community produces a recurring brief: signage package, install schedule, brand spec, model identity, wayfinding, repair, offsite. Each brief produces a proof deck for client review — a designer pulling community data, applying the homebuilder's brand standards (specific typefaces, multiple wordmark variants, price-band overlays), assembling cover and interior pages in PowerPoint, exporting to PDF, sending for review, capturing revisions, cycling.
+  </p>
+  <p>
+    Multiplied across 16 communities, weekly: <strong>hours of designer work each week, distributed across dozens of designers.</strong> A six-figure annual labor envelope just to keep the proof-deck loop running — before a single sign is produced. This is the operational reality of every mid-market production-services business. It is also exactly the kind of work most companies look at and conclude: <em>we'll just hire another designer.</em>
+  </p>
+
+  <h2>What we built (DeckForge)</h2>
+  <p>
+    DeckForge is the internal automation pipeline. It is not a deck-design tool. It is the operator system that runs the entire sign-program loop end to end.
+  </p>
+
+  <p><strong>The loop:</strong></p>
+  <ul class="bullets">
+    <li><strong>Brief.</strong> The Atlas dashboard's request column is the source of truth — what each community needs this week.</li>
+    <li><strong>Render.</strong> A Python engine consumes the brief and produces a brand-locked PPTX and PDF — covers, interior pages, sign instances, model identity, wayfinding, price overlays.</li>
+    <li><strong>Publish.</strong> An Apps Script web app receives the rendered files, saves them to the client Drive folder, sets sharing, and writes a row into the Atlas deck-status tab.</li>
+    <li><strong>Approve.</strong> Atlas's approval column moves through a lifecycle DeckForge writes itself: <span class="term">Drafting → Proof Sent → Revision Requested → Approved → Production-Rendered → Ordered → Installed.</span></li>
+    <li><strong>Produce.</strong> Once approved, DeckForge emits production press files (one row per physical sign location, with the correct CMYK profile, bleed, color spec) and dispatches to Signs365, local CNC, or local plotter.</li>
+    <li><strong>Install.</strong> Status flows back into Atlas through the existing install workflow — photos, monument signs, wayfinding, model ID, awning status.</li>
+  </ul>
+
+  <p class="pullquote">
+    What was hours of designer work each week, across dozens of designers, <span class="accent">now happens in minutes.</span>
+  </p>
+
+  <p>
+    The first major client's communities have already shipped through this pipeline: Grand Park, Marion Oaks, Bellehaven, Heath Preserve, Juliette Falls, Marion Ranch, Millwood, Pioneer Ranch, Grand Oaks Manor, Oak Hammock, Trailhead Landing, Tara Baywood, Tara Forest East, Tara Serena, Grand Park North, and the corporate office build — sixteen communities, one pipeline.
+  </p>
+
+  <h2>What 10x looks like</h2>
+  <p>
+    Adding a client at 10x scale — going from one national account to ten — is a <code>brand/&lt;client&gt;/</code> folder commit. Drop in fonts, color tokens, wordmark variants, schema entries. The dashboard expands; DeckForge consumes it the same way. <strong>Zero new designers.</strong> The labor curve goes flat while the revenue curve goes up. Every additional client is pure margin against a fixed pipeline.
+  </p>
+  <p>
+    The Atlas dashboard built for the first national homebuilder has already helped Brand 9 land two additional national accounts. Both will get their own dashboard instances on the same architecture — same loop, different brand folder. <strong>"We ran ourselves at 10x without hiring"</strong> is the proof the next homebuilder, university campus, military base, or Fortune 500 retrofit client signs on.
+  </p>
+
+  <h2>What 100x looks like</h2>
+
+  <div class="numberline">
+    <div class="numberline-card">
+      <div class="scale">1x · today</div>
+      <div class="stat">1 client · <span class="accent">16 communities</span></div>
+      <div class="desc">Weekly designer hours, dozens of designers, collapsed to minutes. Pipeline cost approaches a Python run per deck.</div>
+    </div>
+    <div class="numberline-card">
+      <div class="scale">10x · projected</div>
+      <div class="stat">10 clients · <span class="accent">~160 communities</span></div>
+      <div class="desc">brand/&lt;client&gt;/ folder per account. Zero new designers. Labor curve flat. Margin compounds.</div>
+    </div>
+    <div class="numberline-card">
+      <div class="scale">100x · projection</div>
+      <div class="stat">1,000+ communities · <span class="accent">national operator scale</span></div>
+      <div class="desc">Design bottleneck disappears. Install-crew throughput becomes the new gate. Drone supervision turns install into a measured production line.</div>
+    </div>
+  </div>
+
+  <p>
+    At 100x — a thousand-plus communities, multi-vertical (residential, institutional, retail, hospitality, government) — the design bottleneck doesn't just shrink, it disappears. The constraint shifts entirely off the proof-deck loop and onto install-crew throughput, fabrication capacity, and brand-ingest velocity (how fast a new <code>brand/&lt;client&gt;/</code> folder can be cut). Drones — currently in pilot for install supervision — turn install quality into a measured production line, not a craft-shop variable. Brand 9 looks, at 100x, like a national-scale signage operator without the headcount of a national-scale signage operator. The signage equivalent of a Frontier Firm.
+  </p>
+
+  <h2>The PRAGMA implication</h2>
+  <p>
+    DeckForge is not a Brand 9 success story. It is the template.
+  </p>
+  <p>
+    Any business with repeatable client deliverables has a DeckForge waiting to be built — investor decks, legal briefs, sales collateral, sector reports, marketing kits, agency revisions, audit workpapers, compliance attestations, design handoffs, RFP responses. The pattern is the same: brief lives in a structured surface, agents render the deliverable in a brand-locked format, an approval lifecycle moves status forward, production output dispatches, and the loop closes.
+  </p>
+
+  <div class="callout">
+    <div class="callout-tag">The pitch, made literal</div>
+    <p class="callout-body">
+      You already have a DeckForge problem — dozens of people, hours per week, a repeatable output. PRAGMA installs the operator version. The system is built on the operator before it's sold to you. We didn't read about it. We ran it. Then we packaged it.
+    </p>
+  </div>
+
+  <p>
+    This case study is not marketing. It is the existence proof — written by the firm that runs the system, about the operator the system was built on.
+  </p>
+
+  <div class="author-block">
+    <div class="author-mark">&gt;_</div>
+    <div>
+      <div class="author-name">PRAGMA</div>
+      <div class="author-role">A Hartley Capital company · institutional voice</div>
+      <div class="author-bio">
+        A Hartley Capital company. The operating system — multi-agent AI infrastructure plus the thin operating layer that runs it — drafts, runs, and ships every PRAGMA engagement. Research foundation: Lakhani et al. (HBS, 2025); Dell&#39;Acqua et al. (HBS, 2023); Microsoft Work Trend Index (2026). Sister company: <a href="https://brand9signs.com" class="inline" rel="noopener">Brand 9 Signs</a> — the 40-year operator the system was built on.
+      </div>
+    </div>
+  </div>
+
+  <div class="cta-footer">
+    <h3>The application is <span class="accent">the conversation.</span></h3>
+    <a href="/apply/" class="cta-primary">Begin your application</a>
+  </div>
+</article>
+
+<footer>PRAGMA<span class="dot">.</span> · A Hartley Capital Company · 2026 · prag-ma.ai</footer>
+
+<script defer src="/web-vitals.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+# PRAGMA — robots.txt
+# prag-ma.ai
+# Updated: 2026-05-19
+
+User-agent: *
+Allow: /
+Disallow: /apply/received/
+
+# AI / LLM crawlers — explicitly allowed for Generative Engine Optimization
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Bytespider
+Disallow: /
+
+# Sitemap
+Sitemap: https://prag-ma.ai/sitemap.xml

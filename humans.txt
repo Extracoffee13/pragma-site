@@ -1,0 +1,42 @@
+/* PRAGMA */
+/* prag-ma.ai */
+
+# THE FIRM
+PRAGMA — a Hartley Capital company.
+An AI deployment firm. We install Frontier Firm Operating Systems on
+small and mid-sized businesses. Live in thirty days; evolved on retainer.
+
+# OPERATING MODEL
+PRAGMA is a Frontier Firm itself.
+≤3 humans + the Construct (a multi-agent system).
+The eight PRAGMA Operators that built and run this site:
+  - Keystone — chief strategy officer / venture architect
+  - Vector — brand and design lead / graphic designer
+  - Atlas — operations officer / live ops dashboard
+  - Lens — daily intelligence officer
+  - Scout — research lead / due diligence
+Plus the Construct's brand-review, content-creation, design-system, and ux-copy skills.
+Every page was authored against the locked tagline:
+  We don't write the plan. We run it.
+
+# RESEARCH SPINE
+- Lakhani et al. (HBS, 2025) — The Cybernetic Teammate
+- Dell'Acqua et al. (HBS, 2023) — Navigating the Jagged Technological Frontier
+- Microsoft (2026) — Work Trend Index: The Frontier Firm
+- Narayandas & Zhang (HBS, 2026) — Selling Strategic Decision Tools
+
+# TECH STACK
+- Pure static HTML
+- Hosted on DreamHost (Shared Unlimited)
+- Inter, Fraunces, JetBrains Mono via Google Fonts
+- Schema.org JSON-LD for SEO + GEO citation
+- No JavaScript frameworks. No tracking pixels. No cookies.
+
+# THIS FILE
+The /humans.txt standard is documented at https://humanstxt.org
+It's where the people behind a site identify themselves to other humans —
+the inverse of /robots.txt, which speaks to machines.
+PRAGMA's twist: the people are joined by their agents. Both built this.
+
+# CONTACT
+run@prag-ma.ai

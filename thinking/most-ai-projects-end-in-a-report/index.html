@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Most AI projects end in a report. Ours end in a running system. · PRAGMA</title>
+<meta name="description" content="The difference between AI consulting and AI deployment, in plain language. Why most AI projects stall before they run, and what changes when the deliverable is the system itself.">
+<meta name="author" content="PRAGMA">
+<meta name="theme-color" content="#0A0A0A">
+<link rel="canonical" href="https://prag-ma.ai/thinking/most-ai-projects-end-in-a-report/">
+
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://prag-ma.ai/thinking/most-ai-projects-end-in-a-report/">
+<meta property="og:title" content="Most AI projects end in a report. Ours end in a running system.">
+<meta property="og:description" content="The difference between AI consulting and AI deployment, in plain language.">
+<meta property="article:author" content="PRAGMA">
+<meta property="article:published_time" content="2026-05-19">
+
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 240'%3E%3Crect width='240' height='240' fill='%230A0A0A'/%3E%3Ccircle cx='120' cy='120' r='89' fill='none' stroke='%231FE07E' stroke-width='14'/%3E%3Ctext x='120' y='154' text-anchor='middle' font-family='monospace' font-size='100' font-weight='700' fill='%231FE07E' letter-spacing='-4'%3E%26gt%3B_%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800;900&family=Fraunces:opsz,wght@9..144,300..700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://prag-ma.ai/thinking/most-ai-projects-end-in-a-report/#article",
+      "headline": "Most AI projects end in a report. Ours end in a running system.",
+      "description": "The difference between AI consulting and AI deployment.",
+      "datePublished": "2026-05-19",
+      "dateModified": "2026-05-19",
+      "author": { "@type": "Organization", "name": "PRAGMA", "url": "https://prag-ma.ai/" },
+      "publisher": { "@type": "Organization", "name": "PRAGMA", "url": "https://prag-ma.ai/" },
+      "mainEntityOfPage": "https://prag-ma.ai/thinking/most-ai-projects-end-in-a-report/"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://prag-ma.ai/" },
+        { "@type": "ListItem", "position": 2, "name": "Thinking", "item": "https://prag-ma.ai/thinking/" },
+        { "@type": "ListItem", "position": 3, "name": "Most AI projects end in a report", "item": "https://prag-ma.ai/thinking/most-ai-projects-end-in-a-report/" }
+      ]
+    }
+  ]
+}
+</script>
+
+<style>
+:root {
+  --void: #0A0A0A; --void-2: #0E0E0E; --void-3: #141414;
+  --signal: #1FE07E; --signal-2: #19C46D;
+  --signal-dim: rgba(31,224,126,0.08); --signal-line: rgba(31,224,126,0.18);
+  --output: #FFFFFF; --output-65: rgba(255,255,255,0.65);
+  --output-45: rgba(255,255,255,0.45); --output-30: rgba(255,255,255,0.30);
+  --output-12: rgba(255,255,255,0.12); --output-04: rgba(255,255,255,0.04);
+  --f-sans: 'Inter', system-ui, sans-serif;
+  --f-serif: 'Fraunces', serif;
+  --f-mono: 'JetBrains Mono', monospace;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: var(--void); color: var(--output); font-family: var(--f-sans); font-size: 18px; line-height: 1.8; -webkit-font-smoothing: antialiased; }
+a { color: inherit; text-decoration: none; }
+a.inline { color: var(--signal); border-bottom: 1px solid var(--signal-line); }
+a.inline:hover { border-bottom-color: var(--signal); }
+::selection { background: var(--signal); color: var(--void); }
+
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  padding: 22px 56px; background: rgba(10,10,10,0.72);
+  backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid var(--output-04);
+  display: flex; justify-content: space-between; align-items: center;
+}
+.nav-left { display: flex; align-items: center; gap: 13px; }
+.nav-wordmark { font-size: 20px; font-weight: 900; letter-spacing: -0.03em; }
+.nav-wordmark .dot { color: var(--signal); }
+.nav-back { font-family: var(--f-mono); font-size: 12px; color: var(--output-45); letter-spacing: 0.05em; }
+.nav-back::before { content: '← '; }
+.nav-back:hover { color: var(--output); }
+@media (max-width: 720px) { nav { padding: 18px 24px; } }
+
+.hero { max-width: 760px; margin: 0 auto; padding: 144px 56px 34px; }
+.byline-row {
+  display: flex; gap: 21px; align-items: center;
+  font-family: var(--f-mono); font-size: 11px;
+  color: var(--output-45); letter-spacing: 0.1em; text-transform: uppercase;
+  margin-bottom: 34px;
+}
+.byline-tag { color: var(--signal); }
+.byline-divider { width: 1px; height: 12px; background: var(--output-12); }
+h1 { font-size: clamp(34px, 5vw, 60px); font-weight: 900; letter-spacing: -0.03em; line-height: 1.08; margin-bottom: 28px; }
+h1 .accent { color: var(--signal); }
+
+article { max-width: 720px; margin: 0 auto; padding: 0 56px 89px; }
+.lede {
+  font-family: var(--f-serif); font-size: clamp(20px, 2.5vw, 26px);
+  font-weight: 300; line-height: 1.5; color: var(--output-65);
+  font-style: italic; padding-left: 28px; border-left: 2px solid var(--signal);
+  margin-bottom: 55px;
+}
+h2 { font-size: clamp(24px, 3vw, 32px); font-weight: 800; letter-spacing: -0.02em; line-height: 1.2; margin: 55px 0 21px; }
+h2 .accent { color: var(--signal); }
+p { font-size: 18px; line-height: 1.8; color: var(--output-65); margin-bottom: 24px; font-weight: 300; }
+p strong { color: var(--output); font-weight: 500; }
+p .term { color: var(--signal); font-weight: 500; }
+
+.pullquote {
+  font-family: var(--f-serif); font-size: clamp(24px, 3.5vw, 36px);
+  font-weight: 400; font-style: italic; line-height: 1.3; color: var(--output);
+  margin: 55px 0; padding: 0 0 0 34px; border-left: 2px solid var(--signal);
+}
+.pullquote .accent { color: var(--signal); font-style: normal; font-weight: 500; }
+
+.citation-block {
+  margin: 34px 0; padding: 21px 28px;
+  background: var(--void-3); border-left: 2px solid var(--output-12); border-radius: 4px;
+}
+.citation-src { font-family: var(--f-mono); font-size: 10px; color: var(--signal); letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 8px; opacity: 0.85; }
+.citation-text { font-family: var(--f-serif); font-size: 17px; color: var(--output); line-height: 1.5; }
+
+.author-block {
+  margin-top: 55px; padding: 34px; border: 1px solid var(--output-04); border-radius: 16px; background: var(--void-3);
+  display: flex; gap: 28px; align-items: flex-start;
+}
+.author-mark { flex-shrink: 0; width: 56px; height: 56px; border-radius: 50%; background: var(--signal-dim); border: 1px solid var(--signal-line); display: flex; align-items: center; justify-content: center; font-family: var(--f-mono); font-weight: 700; color: var(--signal); }
+.author-info { font-size: 15px; }
+.author-name { color: var(--output); font-weight: 700; margin-bottom: 4px; font-size: 16px; }
+.author-role { font-family: var(--f-mono); font-size: 11px; color: var(--signal); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 13px; opacity: 0.85; }
+.author-bio { color: var(--output-65); line-height: 1.6; font-size: 14.5px; font-weight: 300; }
+
+.cta-footer { margin-top: 55px; padding: 55px 0; text-align: center; border-top: 1px solid var(--output-04); }
+.cta-footer h3 { font-size: clamp(22px, 3vw, 32px); font-weight: 800; letter-spacing: -0.02em; margin-bottom: 21px; }
+.cta-footer h3 .accent { color: var(--signal); }
+.cta-primary { display: inline-flex; align-items: center; gap: 10px; background: var(--signal); color: var(--void); padding: 22px 56px; border-radius: 100px; font-size: 16px; font-weight: 700; }
+.cta-primary::after { content: '→'; transition: transform 200ms ease; }
+.cta-primary:hover { background: var(--signal-2); transform: translateY(-1px); }
+.cta-primary:hover::after { transform: translateX(4px); }
+
+footer { padding: 34px 56px; border-top: 1px solid var(--output-04); text-align: center; font-family: var(--f-mono); font-size: 11px; color: var(--output-30); letter-spacing: 0.12em; }
+footer .dot { color: var(--signal); }
+
+@media (max-width: 720px) {
+  .hero { padding: 120px 24px 21px; }
+  article { padding: 0 24px 55px; }
+  footer { padding: 24px; }
+}
+
+/* ── HERO MOTION GRAPHIC (PRAGMA blog style spec v1.1) ── */
+.hero-motion { width:100%; max-width:1200px; margin:110px auto 0; padding:0 24px; aspect-ratio:1200/630; }
+.hero-motion svg { width:100%; height:100%; display:block; border-radius:13px; overflow:hidden; }
+.pmg-bg { fill:#0A0A0A; }
+.pmg-glow { fill:url(#pmgGlow); }
+@keyframes pmgDrift { 0%,100% { transform:translate(0,0); } 50% { transform:translate(-40px,60px); } }
+.pmg-glow-wrap { animation: pmgDrift 60s ease-in-out infinite; transform-origin:center; }
+.pmg-cmd-group { -webkit-clip-path:inset(0 100% 0 0); clip-path:inset(0 100% 0 0); opacity:0; animation: pmgCmdLifecycle 5s infinite; }
+@keyframes pmgCmdLifecycle {
+  0% { -webkit-clip-path:inset(0 100% 0 0); clip-path:inset(0 100% 0 0); opacity:1; }
+  4% { opacity:1; }
+  22% { -webkit-clip-path:inset(0 0 0 0); clip-path:inset(0 0 0 0); opacity:1; }
+  46% { -webkit-clip-path:inset(0 0 0 0); clip-path:inset(0 0 0 0); opacity:1; }
+  50% { -webkit-clip-path:inset(0 0 0 0); clip-path:inset(0 0 0 0); opacity:0; }
+  100% { opacity:0; }
+}
+.pmg-cmd-text { font-family:'JetBrains Mono',monospace; font-weight:700; font-size:56px; fill:#1FE07E; letter-spacing:-1px; }
+.pmg-cursor { font-family:'JetBrains Mono',monospace; font-weight:700; font-size:56px; fill:#1FE07E; animation: pmgCursorLifecycle 5s infinite; }
+@keyframes pmgCursorLifecycle {
+  0%,21% { opacity:0; }
+  22%,26% { opacity:1; }
+  27%,30% { opacity:0; }
+  31%,35% { opacity:1; }
+  36%,39% { opacity:0; }
+  40%,44% { opacity:1; }
+  45%,50% { opacity:0; }
+  100% { opacity:0; }
+}
+.pmg-title-group { opacity:0; animation: pmgTitleLifecycle 5s infinite; }
+@keyframes pmgTitleLifecycle { 0%,50% { opacity:0; } 60% { opacity:1; } 92% { opacity:1; } 100% { opacity:0; } }
+.pmg-title { font-family:'Inter',sans-serif; font-weight:900; letter-spacing:-3px; fill:#FFFFFF; }
+.pmg-title .accent { fill:#1FE07E; }
+.pmg-eyebrow { font-family:'JetBrains Mono',monospace; font-weight:500; font-size:14px; fill:rgba(31,224,126,0.65); letter-spacing:3.5px; }
+@media (prefers-reduced-motion: reduce) {
+  .pmg-cmd-group,.pmg-title-group,.pmg-cursor { animation:none; opacity:1; -webkit-clip-path:none; clip-path:none; }
+  .pmg-glow-wrap { animation:none; }
+}
+@media (max-width:720px) { .hero-motion { margin-top:88px; padding:0 16px; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-left">
+    <svg width="28" height="28" viewBox="0 0 240 240" aria-hidden="true">
+      <circle cx="120" cy="120" r="89" fill="none" stroke="#1FE07E" stroke-width="9"/>
+      <text x="120" y="148" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="86" font-weight="700" fill="#1FE07E" letter-spacing="-3">&gt;_</text>
+    </svg>
+    <div class="nav-wordmark">PRAGMA<span class="dot">.</span></div>
+  </a>
+  <a href="/thinking/" class="nav-back">back to thinking</a>
+</nav>
+
+<div class="hero-motion" aria-label="PRAGMA · Most AI Projects End in a Report">
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" role="img">
+  <defs>
+    <radialGradient id="pmgGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1FE07E" stop-opacity="0.07"/>
+      <stop offset="70%" stop-color="#1FE07E" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect class="pmg-bg" width="1200" height="630"/>
+  <g class="pmg-glow-wrap"><circle class="pmg-glow" cx="1050" cy="80" r="380"/></g>
+  <g class="pmg-cmd-group"><text class="pmg-cmd-text" x="100" y="265">&gt; ship --not=report</text></g>
+  <text class="pmg-cursor" x="742" y="265">_</text>
+  <g class="pmg-title-group">
+    <text class="pmg-title" x="100" y="265" font-size="92">Most AI Projects</text>
+    <text class="pmg-title" x="100" y="395" font-size="92">End in a Report<tspan class="accent">.</tspan></text>
+  </g>
+  <text class="pmg-eyebrow" x="100" y="560">&gt;_ THINKING · PRAGMA · 2026</text>
+</svg>
+</div>
+
+<header class="hero">
+  <div class="byline-row">
+    <span class="byline-tag">>_ Thesis</span>
+    <div class="byline-divider"></div>
+    <span>PRAGMA</span>
+    <div class="byline-divider"></div>
+    <span>May 19, 2026</span>
+    <div class="byline-divider"></div>
+    <span>4 min read</span>
+  </div>
+  <h1>Most AI projects end in a report.<br><span class="accent">Ours end in a running system.</span></h1>
+</header>
+
+<article>
+  <p class="lede">
+    For thirty years, business consulting has had the same shape: a team flies in, observes for ninety days, hands you a plan, and leaves. AI consulting today repeats the pattern with new vocabulary. PRAGMA was built to be the operating-model alternative.
+  </p>
+
+  <h2>The shape of the problem</h2>
+
+  <p>
+    Steve Jobs said it best, paraphrased: consultants see <em>a sliver</em>. They observe one quarter of one part of your business, write up what they saw, recommend what to do about it, and leave. The work of actually changing how the business operates is yours, alone, after the deck closes.
+  </p>
+
+  <p>
+    The pattern survives because it's profitable for the firm doing the consulting. Five consultants billing $200/hour for ninety days produces $720,000 of revenue against a deliverable that imposes zero implementation risk. The client walks away with a binder. The firm walks away with a check. The business runs the same as before, except now there's a roadmap in a drawer.
+  </p>
+
+  <p>
+    AI consulting has imported this shape wholesale. <strong>An AI strategy assessment.</strong> A capabilities maturity model. A prioritized roadmap of use cases. A recommended pilot. A change-management plan. None of it actually does the work. The client gets a report; the work to deploy AI in the business still sits on the client's plate, exactly as it did before.
+  </p>
+
+  <p class="pullquote">
+    The deliverable has been a report for forty years. AI did not change the shape of consulting. The shape of consulting is now <span class="accent">the constraint.</span>
+  </p>
+
+  <h2>What the research actually says</h2>
+
+  <p>
+    Karim Lakhani and his co-authors at Harvard Business School ran a field experiment with 791 P&amp;G professionals in 2025 — the Cybernetic Teammate study. The finding was unambiguous: <strong>individuals working with AI matched the performance of teams working without AI</strong> on breakthrough innovation tasks. The capacity multiplier from properly-deployed AI is large enough to substitute for entire human teams.
+  </p>
+
+  <div class="citation-block">
+    <div class="citation-src">Lakhani et al. · HBS · 2025 · Cybernetic Teammate</div>
+    <div class="citation-text">"Individuals working with AI matched the performance of teams working without AI on breakthrough output. The augmented individual is not a smaller team — it is a different operating unit."</div>
+  </div>
+
+  <p>
+    Microsoft's 2026 Work Trend Index documents the same shift at the firm level — they call it the <span class="term">Frontier Firm</span>, human-led and agent-operated, with AI at the core of operations rather than at the edge. Dell'Acqua's earlier work on the Jagged Frontier (HBS, 2023, N=758) showed augmented workers exceeded baselines by 25-40% inside AI's capability set.
+  </p>
+
+  <p>
+    All three studies share a finding consulting reports systematically miss: <strong>the leverage is in the deployment, not the strategy.</strong> The strategy has been published. It's been published by HBS. It's been published by Microsoft. It's been published in HBR. It is not the bottleneck. The bottleneck is the operational work of building, installing, and running the agent architecture inside a real business that does not stop operating to accommodate the project.
+  </p>
+
+  <h2>What PRAGMA does differently</h2>
+
+  <p>
+    PRAGMA's deliverable is the running system. Not the plan to build one. The system itself — installed on the client's own AI platform, agents running continuously, work happening, by the end of week eight. The work the client previously assigned to three to five specialized hires now belongs to the agent map.
+  </p>
+
+  <p>
+    Phase one (weeks 1-2) is the closest thing to traditional consulting work — discovery and architecture, understanding how the business actually runs, drafting the agent set. But phase one ends with a worksheet that immediately drives phase two (build), not a binder that ends the engagement. By week six the agents are live. By week eight the system runs without daily PRAGMA involvement. The retainer phase that follows is for evolution, not implementation — implementation already happened.
+  </p>
+
+  <p>
+    The pricing model reflects the deliverable. Setup fee covers the architecture work. Monthly retainer covers ongoing system evolution. <strong>Outcome share</strong> — 3% to 7% of measurable wins — aligns PRAGMA's pay with the client's results. Hourly billing would misalign the incentives: PRAGMA profits when the client's revenue/savings increase. Not before, not regardless.
+  </p>
+
+  <h2>The wedge: <span class="accent">built on the operator</span></h2>
+
+  <p>
+    Most AI consulting firms sell what they have not operated. They publish frameworks they have not used. They recommend deployments they have not lived inside. The first time the methodology hits a real business is at the client.
+  </p>
+
+  <p>
+    PRAGMA inverts that. <strong>Hartley Capital — PRAGMA's parent — ran this operating system internally before PRAGMA sold a single engagement.</strong> Every Operator in the kit comes from a system that's been in continuous use in a real operating firm. Keystone for strategy. Vector for brand and design. Atlas for operations. Lens for intelligence. Scout for research. The architecture survived a year of operating reality before being productized.
+  </p>
+
+  <p>
+    That's the wedge. Most consulting firms cannot make this claim; most pretend they can. PRAGMA can, and the operating model itself is the proof.
+  </p>
+
+  <p class="pullquote">
+    We don't ship architectures we haven't run ourselves. <span class="accent">The pricing reflects that. The retainer reflects that. The outcome share reflects that.</span>
+  </p>
+
+  <h2>What this means for the SMB founder</h2>
+
+  <p>
+    If you run a $1M to $50M business and you've been told by a consulting firm that you need an AI strategy assessment — the assessment is the warning sign. The strategy has been published. What you need is the deployment.
+  </p>
+
+  <p>
+    The PRAGMA model is built for businesses your size for a specific reason: small and mid-sized businesses have less organizational drag than enterprises. There is no middle management slow-rolling AI adoption (Narayandas &amp; Zhang, HBS 2026 — the Transformation Paradox). Decisions get made faster. Reversals are cheaper. The asymmetric leverage of agent deployment is highest at SMB scale.
+  </p>
+
+  <p>
+    The conversation begins with the <a href="/apply/" class="inline">application</a>. Every application is read personally by the operator. If we're a fit, we'll book a discovery call within five business days. If we're not, the conversation still leaves you with a clearer picture of where AI fits in your operating model — and that's what the report would have cost you a hundred and eighty thousand dollars to find out.
+  </p>
+
+  <div class="author-block">
+    <div class="author-mark">&gt;_</div>
+    <div class="author-info">
+      <div class="author-name">PRAGMA</div>
+      <div class="author-role">A Hartley Capital company · institutional voice</div>
+      <div class="author-bio">
+        A Hartley Capital company. The Frontier Firm operating system — ≤3 humans plus the agent group — drafts, runs, and ships every PRAGMA engagement. Research foundation: Lakhani et al. (HBS, 2025); Dell&#39;Acqua et al. (HBS, 2023); Microsoft Work Trend Index (2026); Narayandas &amp; Zhang (HBS, 2026).
+      </div>
+    </div>
+  </div>
+
+  <div class="cta-footer">
+    <h3>The application is <span class="accent">the conversation.</span></h3>
+    <a href="/apply/" class="cta-primary">Begin your application</a>
+  </div>
+</article>
+
+<footer>
+  PRAGMA<span class="dot">.</span> · A Hartley Capital Company · 2026 · prag-ma.ai
+</footer>
+
+<script defer src="/web-vitals.js"></script>
+</body>
+</html>

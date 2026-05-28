@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy · PRAGMA</title>
+<meta name="description" content="PRAGMA collects only what is required to consider your application and respond to inquiries. No tracking pixels, no advertising cookies, no third-party analytics.">
+<meta name="theme-color" content="#0A0A0A">
+<link rel="canonical" href="https://prag-ma.ai/privacy/">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 240'%3E%3Crect width='240' height='240' fill='%230A0A0A'/%3E%3Ccircle cx='120' cy='120' r='89' fill='none' stroke='%231FE07E' stroke-width='14'/%3E%3Ctext x='120' y='154' text-anchor='middle' font-family='monospace' font-size='100' font-weight='700' fill='%231FE07E' letter-spacing='-4'%3E%26gt%3B_%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root { --void:#0A0A0A; --signal:#1FE07E; --signal-2:#19C46D; --signal-dim:rgba(31,224,126,0.08); --signal-line:rgba(31,224,126,0.18); --output:#FFFFFF; --output-65:rgba(255,255,255,0.65); --output-45:rgba(255,255,255,0.45); --output-30:rgba(255,255,255,0.30); --output-12:rgba(255,255,255,0.12); --output-04:rgba(255,255,255,0.04); }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background:var(--void); color:var(--output); font-family:'Inter',system-ui,sans-serif; font-size:17px; line-height:1.75; -webkit-font-smoothing:antialiased; }
+a { color:inherit; text-decoration:none; }
+a.inline { color:var(--signal); border-bottom:1px solid var(--signal-line); }
+a.inline:hover { border-bottom-color:var(--signal); }
+::selection { background:var(--signal); color:var(--void); }
+
+nav { position:sticky; top:0; z-index:100; padding:22px 56px; background:rgba(10,10,10,0.72); backdrop-filter:blur(20px) saturate(180%); -webkit-backdrop-filter:blur(20px) saturate(180%); border-bottom:1px solid var(--output-04); display:flex; justify-content:space-between; align-items:center; }
+.nav-left { display:flex; align-items:center; gap:13px; }
+.nav-wordmark { font-size:20px; font-weight:900; letter-spacing:-0.03em; }
+.nav-wordmark .dot { color:var(--signal); }
+.nav-cta { font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--signal); padding:9px 21px; border:1px solid var(--signal-line); border-radius:100px; letter-spacing:0.05em; }
+.nav-cta::before { content:'>_ '; opacity:0.7; }
+.nav-cta:hover { background:var(--signal-dim); }
+
+article { max-width:760px; margin:0 auto; padding:89px 56px; }
+.eyebrow { font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--signal); letter-spacing:0.25em; text-transform:uppercase; margin-bottom:34px; }
+.eyebrow::before { content:'>_ '; opacity:0.6; margin-right:4px; }
+h1 { font-size:clamp(36px,5vw,60px); font-weight:900; letter-spacing:-0.035em; line-height:1.05; margin-bottom:34px; }
+h1 .accent { color:var(--signal); }
+.updated { font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--output-30); letter-spacing:0.15em; text-transform:uppercase; margin-bottom:34px; }
+h2 { font-size:clamp(22px,3vw,30px); font-weight:800; letter-spacing:-0.02em; line-height:1.2; margin:55px 0 14px; }
+h2 .accent { color:var(--signal); }
+p { color:var(--output-65); margin-bottom:21px; font-weight:300; }
+p strong { color:var(--output); font-weight:500; }
+.bullets { list-style:none; padding:0; margin:21px 0 34px; }
+.bullets li { position:relative; padding-left:28px; margin-bottom:13px; color:var(--output-65); font-weight:300; line-height:1.65; }
+.bullets li::before { content:'>_'; position:absolute; left:0; top:0; font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--signal); font-weight:700; opacity:0.7; }
+.bullets li strong { color:var(--output); font-weight:500; }
+.contact-block { margin-top:34px; padding:28px 34px; background:var(--signal-dim); border-left:2px solid var(--signal); border-radius:4px; }
+.contact-block-tag { font-family:'JetBrains Mono',monospace; font-size:10px; color:var(--signal); letter-spacing:0.2em; text-transform:uppercase; margin-bottom:8px; }
+.contact-block p { color:var(--output); margin:0; }
+footer { padding:34px 56px; border-top:1px solid var(--output-04); text-align:center; font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--output-30); letter-spacing:0.12em; }
+footer .dot { color:var(--signal); }
+@media (max-width:720px){ nav{padding:18px 24px} article{padding:55px 24px} footer{padding:24px} }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-left">
+    <svg width="28" height="28" viewBox="0 0 240 240" aria-hidden="true">
+      <circle cx="120" cy="120" r="89" fill="none" stroke="#1FE07E" stroke-width="9"/>
+      <text x="120" y="148" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="86" font-weight="700" fill="#1FE07E" letter-spacing="-3">&gt;_</text>
+    </svg>
+    <div class="nav-wordmark">PRAGMA<span class="dot">.</span></div>
+  </a>
+  <a href="/how-it-works/" class="nav-link" style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--output-45);letter-spacing:0.05em;margin-right:21px;">how it works</a>
+  <a href="/apply/" class="nav-cta">apply</a>
+</nav>
+
+<article>
+  <div class="eyebrow">Privacy</div>
+  <h1>What we collect, <span class="accent">what we don't.</span></h1>
+  <div class="updated">Effective May 19, 2026</div>
+
+  <p>
+    PRAGMA is built around a single principle: collect only what's required to do the work, and protect what's collected. This page documents what that means in practice for visitors to <a href="https://prag-ma.ai" class="inline">prag-ma.ai</a>.
+  </p>
+
+  <h2>What we <span class="accent">don't</span> do</h2>
+  <ul class="bullets">
+    <li><strong>No advertising cookies.</strong> The site sets zero advertising or retargeting cookies.</li>
+    <li><strong>No third-party tracking pixels.</strong> No Facebook Pixel, no LinkedIn Insight Tag, no Google Ads tags.</li>
+    <li><strong>No cross-site behavioral tracking.</strong> What you do on this site stays on this site.</li>
+    <li><strong>No data sales.</strong> We never sell, rent, or share visitor data with third parties for marketing.</li>
+    <li><strong>No newsletter list.</strong> There is no list to be added to. You are not the product.</li>
+  </ul>
+
+  <h2>What we <span class="accent">do</span> collect</h2>
+  <p>
+    <strong>Application form submissions.</strong> When you fill out the application at <a href="/apply/" class="inline">/apply/</a>, the form data is transmitted (encrypted) to a form-handling service (Formspree), which forwards it to PRAGMA and stores a copy on their servers. The information you provide — your name, contact details, company information, answers to the application questions — is used to evaluate your application and respond to it. Application data is retained for our records.
+  </p>
+  <p>
+    <strong>Server logs.</strong> Our hosting provider (DreamHost) maintains standard server logs containing IP addresses and request timestamps. These are used for security and operational purposes only. Logs are retained per the hosting provider's standard practice.
+  </p>
+  <p>
+    <strong>Eventually: privacy-respecting analytics.</strong> We may add a privacy-first analytics tool (such as Plausible Analytics) that records aggregate page-view data without setting cookies or identifying individual visitors. If we do, this page will be updated and the analytics will not require a cookie banner because no personal data is collected.
+  </p>
+
+  <h2>Cookies</h2>
+  <p>
+    The site does not currently set cookies of any kind. If that ever changes — for example, if we add a feature requiring session storage — this page will be updated and you will see a clear disclosure.
+  </p>
+
+  <h2>Your rights</h2>
+  <p>
+    If you've submitted an application and want a copy of what we have, want it deleted, or want to opt out of future communications, contact us at the email below. We respond within five business days.
+  </p>
+
+  <h2>Children</h2>
+  <p>
+    The PRAGMA service is offered to business operators and is not directed at children under 13. We do not knowingly collect information from children.
+  </p>
+
+  <h2>Changes to this policy</h2>
+  <p>
+    Material changes will be reflected in the effective date at the top of this page. We don't expect changes to be frequent; the operating principle (collect minimally, protect what's collected) is stable.
+  </p>
+
+  <div class="contact-block">
+    <div class="contact-block-tag">>_ contact</div>
+    <p>For privacy questions: <a href="mailto:run@prag-ma.ai" class="inline">run@prag-ma.ai</a></p>
+  </div>
+</article>
+
+<footer>PRAGMA<span class="dot">.</span> · A Hartley Capital Company · 2026 · prag-ma.ai · <a href="/terms/" style="color:var(--output-30);">terms</a></footer>
+
+<script defer src="/web-vitals.js"></script>
+</body>
+</html>

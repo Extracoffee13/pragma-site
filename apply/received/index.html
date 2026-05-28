@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Application received · PRAGMA</title>
+<meta name="description" content="Your PRAGMA application has been received. Every application is read personally by the operator and answered within 5 business days.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0A0A0A">
+<link rel="canonical" href="https://prag-ma.ai/apply/received/">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 240'%3E%3Crect width='240' height='240' fill='%230A0A0A'/%3E%3Ccircle cx='120' cy='120' r='89' fill='none' stroke='%231FE07E' stroke-width='14'/%3E%3Ctext x='120' y='154' text-anchor='middle' font-family='monospace' font-size='100' font-weight='700' fill='%231FE07E' letter-spacing='-4'%3E%26gt%3B_%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800;900&family=Fraunces:opsz,wght@9..144,300..700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root { --void:#0A0A0A; --signal:#1FE07E; --signal-2:#19C46D; --signal-dim:rgba(31,224,126,0.08); --signal-line:rgba(31,224,126,0.18); --output:#FFFFFF; --output-65:rgba(255,255,255,0.65); --output-45:rgba(255,255,255,0.45); --output-30:rgba(255,255,255,0.30); --output-12:rgba(255,255,255,0.12); --output-04:rgba(255,255,255,0.04); }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background:var(--void); color:var(--output); font-family:'Inter',system-ui,sans-serif; -webkit-font-smoothing:antialiased; min-height:100vh; display:flex; flex-direction:column; }
+a { color:inherit; text-decoration:none; }
+::selection { background:var(--signal); color:var(--void); }
+
+nav { padding:22px 56px; display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid var(--output-04); }
+.nav-left { display:flex; align-items:center; gap:13px; }
+.nav-wordmark { font-size:20px; font-weight:900; letter-spacing:-0.03em; }
+.nav-wordmark .dot { color:var(--signal); }
+.nav-cta { font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--output-45); letter-spacing:0.05em; }
+.nav-cta::before { content:'← '; }
+.nav-cta:hover { color:var(--output); }
+
+main { flex:1; display:flex; align-items:center; justify-content:center; padding:55px 56px; position:relative; overflow:hidden; }
+main::before { content:''; position:absolute; top:-200px; right:-200px; width:600px; height:600px; border-radius:50%; background:radial-gradient(circle, rgba(31,224,126,0.08) 0%, transparent 70%); pointer-events:none; }
+.inner { max-width:680px; text-align:center; position:relative; z-index:1; }
+
+.check-mark {
+  margin: 0 auto 34px; width: 112px; height: 112px;
+  border-radius: 50%; background: var(--signal-dim);
+  border: 1px solid var(--signal-line);
+  display: flex; align-items: center; justify-content: center;
+  position: relative;
+}
+.check-mark::after {
+  content: ''; position: absolute; inset: -8px;
+  border-radius: 50%; border: 1px solid var(--signal-line);
+  animation: pulse-ring 2.4s ease-out infinite;
+  opacity: 0;
+}
+@keyframes pulse-ring { 0%{transform:scale(0.85);opacity:0.6} 100%{transform:scale(1.4);opacity:0} }
+
+.eyebrow { font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--signal); letter-spacing:0.25em; text-transform:uppercase; margin-bottom:21px; }
+.eyebrow::before { content:'>_ '; opacity:0.6; margin-right:4px; }
+h1 { font-size:clamp(36px,5.5vw,64px); font-weight:900; letter-spacing:-0.035em; line-height:1.05; margin-bottom:28px; }
+h1 .accent { color:var(--signal); }
+.lede { font-family:'Fraunces',serif; font-size:clamp(18px,2.2vw,22px); font-weight:300; font-style:italic; color:var(--output-65); max-width:560px; margin:0 auto 55px; line-height:1.55; }
+
+.meta-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; max-width:680px; margin:0 auto 55px; padding:34px 0; border-top:1px solid var(--output-12); border-bottom:1px solid var(--output-12); }
+.meta-item { padding:0 14px; }
+.meta-label { font-family:'JetBrains Mono',monospace; font-size:10px; color:var(--signal); letter-spacing:0.2em; text-transform:uppercase; opacity:0.7; margin-bottom:8px; }
+.meta-value { font-size:14px; color:var(--output); font-weight:500; line-height:1.4; }
+@media (max-width:640px){ .meta-grid{grid-template-columns:1fr; gap:21px} }
+
+.body-text { color:var(--output-65); line-height:1.7; font-size:17px; max-width:560px; margin:0 auto 34px; font-weight:300; }
+.body-text strong { color:var(--output); font-weight:500; }
+
+.actions { display:flex; gap:14px; justify-content:center; flex-wrap:wrap; margin-top:34px; }
+.cta-primary { display:inline-flex; align-items:center; gap:10px; background:var(--signal); color:var(--void); padding:20px 44px; border-radius:100px; font-size:15px; font-weight:700; }
+.cta-primary::after { content:'→'; transition:transform 200ms ease; }
+.cta-primary:hover { background:var(--signal-2); transform:translateY(-1px); }
+.cta-primary:hover::after { transform:translateX(4px); }
+.cta-secondary { font-family:'JetBrains Mono',monospace; font-size:13px; color:var(--output-45); padding:20px 24px; border:1px solid var(--output-12); border-radius:100px; letter-spacing:0.05em; }
+.cta-secondary::before { content:'>_ '; opacity:0.6; }
+.cta-secondary:hover { color:var(--output); border-color:var(--output-30); }
+
+footer { padding:24px 56px; text-align:center; border-top:1px solid var(--output-04); font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--output-30); letter-spacing:0.12em; }
+footer .dot { color:var(--signal); }
+
+@media (max-width:720px){ nav,main,footer{padding-left:24px;padding-right:24px} .actions{flex-direction:column;align-items:stretch} }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-left">
+    <svg width="28" height="28" viewBox="0 0 240 240" aria-hidden="true">
+      <circle cx="120" cy="120" r="89" fill="none" stroke="#1FE07E" stroke-width="9"/>
+      <text x="120" y="148" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="86" font-weight="700" fill="#1FE07E" letter-spacing="-3">&gt;_</text>
+    </svg>
+    <div class="nav-wordmark">PRAGMA<span class="dot">.</span></div>
+  </a>
+  <a href="/" class="nav-cta">return home</a>
+</nav>
+
+<main>
+  <div class="inner">
+    <div class="check-mark">
+      <svg width="56" height="56" viewBox="0 0 56 56" aria-hidden="true" fill="none">
+        <path d="M14 28 L24 38 L42 18" stroke="#1FE07E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <div class="eyebrow">application received</div>
+    <h1>Your application is<br>in <span class="accent">the queue.</span></h1>
+    <p class="lede">Every application is read personally by the operator. You'll hear back within five business days, regardless of fit.</p>
+
+    <div class="meta-grid">
+      <div class="meta-item">
+        <div class="meta-label">Confirmed</div>
+        <div class="meta-value">A copy went to the email you provided</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-label">Next step</div>
+        <div class="meta-value">Personal review · 5 business days</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-label">Response</div>
+        <div class="meta-value">5 business days · discovery call or honest decline</div>
+      </div>
+    </div>
+
+    <p class="body-text">
+      While you wait — if it's useful — <strong>read our thinking</strong>. Notes on the operating model, the research that informs it, and what we've learned running it on our own business first.
+    </p>
+
+    <div class="actions">
+      <a href="/thinking/" class="cta-primary">Read our thinking</a>
+      <a href="/the-operating-system/" class="cta-secondary">see the OS</a>
+    </div>
+  </div>
+</main>
+
+<footer>PRAGMA<span class="dot">.</span> · A Hartley Capital Company · 2026 · prag-ma.ai</footer>
+
+<script defer src="/web-vitals.js"></script>
+</body>
+</html>
