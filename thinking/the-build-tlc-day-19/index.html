@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Build. Day 19. · PRAGMA</title>
+<meta name="description" content="Total Lawn Care, Jacksonville FL. Day 19 of a 30-day PRAGMA build. The audit is complete — five findings, one dominant fix, and a sequencing change that moves rankings before the new site ever launches.">
+<meta name="author" content="PRAGMA">
+<meta name="theme-color" content="#0A0A0A">
+<link rel="canonical" href="https://prag-ma.ai/thinking/the-build-tlc-day-19/">
+
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://prag-ma.ai/thinking/the-build-tlc-day-19/">
+<meta property="og:title" content="The Build. Day 19.">
+<meta property="og:description" content="Total Lawn Care, Jacksonville FL. Day 19 of a 30-day PRAGMA build. The audit is complete. Here's what it found.">
+<meta property="og:image" content="https://prag-ma.ai/og-mark.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="PRAGMA · The Build. Day 19. Total Lawn Care case study.">
+<meta property="article:author" content="PRAGMA">
+<meta property="article:published_time" content="2026-06-09">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Build. Day 19. · PRAGMA">
+<meta name="twitter:image" content="https://prag-ma.ai/og-mark.png">
+
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 240'%3E%3Crect width='240' height='240' fill='%230A0A0A'/%3E%3Ccircle cx='120' cy='120' r='89' fill='none' stroke='%231FE07E' stroke-width='14'/%3E%3Ctext x='120' y='154' text-anchor='middle' font-family='monospace' font-size='100' font-weight='700' fill='%231FE07E' letter-spacing='-4'%3E%26gt%3B_%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800;900&family=Fraunces:opsz,wght@9..144,300..700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://prag-ma.ai/thinking/the-build-tlc-day-19/#article",
+      "headline": "The Build. Day 19.",
+      "description": "Total Lawn Care, Jacksonville FL. Day 19 of a 30-day PRAGMA build. The audit is complete — five findings, one dominant fix, and a sequencing change that moves rankings before the new site ever launches.",
+      "datePublished": "2026-06-09",
+      "dateModified": "2026-06-09",
+      "author": { "@type": "Organization", "name": "PRAGMA", "url": "https://prag-ma.ai/" },
+      "publisher": { "@type": "Organization", "name": "PRAGMA", "url": "https://prag-ma.ai/", "logo": { "@type": "ImageObject", "url": "https://prag-ma.ai/og-mark.png" } },
+      "image": "https://prag-ma.ai/og-mark.png",
+      "mainEntityOfPage": "https://prag-ma.ai/thinking/the-build-tlc-day-19/",
+      "about": [
+        { "@type": "Thing", "name": "AI operating system deployment" },
+        { "@type": "Thing", "name": "SMB digital presence audit" },
+        { "@type": "Thing", "name": "Commercial landscape industry" }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://prag-ma.ai/" },
+        { "@type": "ListItem", "position": 2, "name": "Thinking", "item": "https://prag-ma.ai/thinking/" },
+        { "@type": "ListItem", "position": 3, "name": "The Build. Day 19.", "item": "https://prag-ma.ai/thinking/the-build-tlc-day-19/" }
+      ]
+    }
+  ]
+}
+</script>
+
+<style>
+:root {
+  --void: #0A0A0A; --void-2: #0E0E0E; --void-3: #141414;
+  --signal: #1FE07E; --signal-2: #19C46D;
+  --signal-dim: rgba(31,224,126,0.08); --signal-line: rgba(31,224,126,0.18);
+  --output: #FFFFFF; --output-65: rgba(255,255,255,0.65);
+  --output-45: rgba(255,255,255,0.45); --output-30: rgba(255,255,255,0.30);
+  --output-12: rgba(255,255,255,0.12); --output-04: rgba(255,255,255,0.04);
+  --f-sans: 'Inter', system-ui, sans-serif;
+  --f-serif: 'Fraunces', serif;
+  --f-mono: 'JetBrains Mono', monospace;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { background: var(--void); color: var(--output); font-family: var(--f-sans); font-size: 18px; line-height: 1.8; -webkit-font-smoothing: antialiased; }
+a { color: inherit; text-decoration: none; }
+a.inline { color: var(--signal); border-bottom: 1px solid var(--signal-line); transition: border-color 200ms ease; }
+a.inline:hover { border-bottom-color: var(--signal); }
+::selection { background: var(--signal); color: var(--void); }
+
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  padding: 22px 56px; background: rgba(10,10,10,0.72);
+  backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid var(--output-04);
+  display: flex; justify-content: space-between; align-items: center;
+}
+.nav-left { display: flex; align-items: center; gap: 13px; }
+.nav-wordmark { font-size: 20px; font-weight: 900; letter-spacing: -0.03em; }
+.nav-wordmark .dot { color: var(--signal); }
+.nav-back { font-family: var(--f-mono); font-size: 12px; color: var(--output-45); letter-spacing: 0.05em; }
+.nav-back::before { content: '← '; }
+.nav-back:hover { color: var(--output); }
+@media (max-width: 720px) { nav { padding: 18px 24px; } }
+
+/* ── HERO MOTION GRAPHIC ── */
+.hero-motion {
+  width: 100%; max-width: 1200px;
+  margin: 88px auto 0; padding: 0 24px;
+  aspect-ratio: 1200 / 630;
+}
+.hero-motion svg { width: 100%; height: 100%; display: block; border-radius: 13px; overflow: hidden; }
+
+.pmg-bg { fill: #0A0A0A; }
+.pmg-glow { fill: url(#pmgGlowTlc); }
+@keyframes pmgDrift {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(-40px, 60px); }
+}
+.pmg-glow-wrap { animation: pmgDrift 60s ease-in-out infinite; transform-origin: center; }
+
+.pmg-cmd-group {
+  -webkit-clip-path: inset(0 100% 0 0);
+  clip-path: inset(0 100% 0 0);
+  opacity: 0;
+  animation: pmgCmdLifecycle 5s infinite;
+}
+@keyframes pmgCmdLifecycle {
+  0%   { -webkit-clip-path: inset(0 100% 0 0); clip-path: inset(0 100% 0 0); opacity: 1; }
+  4%   { opacity: 1; }
+  22%  { -webkit-clip-path: inset(0 0 0 0); clip-path: inset(0 0 0 0); opacity: 1; }
+  46%  { -webkit-clip-path: inset(0 0 0 0); clip-path: inset(0 0 0 0); opacity: 1; }
+  50%  { -webkit-clip-path: inset(0 0 0 0); clip-path: inset(0 0 0 0); opacity: 0; }
+  100% { opacity: 0; }
+}
+.pmg-cmd-text {
+  font-family: 'JetBrains Mono', monospace; font-weight: 700;
+  font-size: 52px; fill: #1FE07E; letter-spacing: -1px;
+}
+.pmg-cursor {
+  font-family: 'JetBrains Mono', monospace; font-weight: 700;
+  font-size: 52px; fill: #1FE07E;
+  animation: pmgCursorLifecycle 5s infinite;
+}
+@keyframes pmgCursorLifecycle {
+  0%, 21%   { opacity: 0; }
+  22%, 26%  { opacity: 1; }
+  27%, 30%  { opacity: 0; }
+  31%, 35%  { opacity: 1; }
+  36%, 39%  { opacity: 0; }
+  40%, 44%  { opacity: 1; }
+  45%, 50%  { opacity: 0; }
+  100%      { opacity: 0; }
+}
+.pmg-title-group {
+  opacity: 0;
+  animation: pmgTitleLifecycle 5s infinite;
+}
+@keyframes pmgTitleLifecycle {
+  0%, 50%   { opacity: 0; }
+  60%       { opacity: 1; }
+  92%       { opacity: 1; }
+  100%      { opacity: 0; }
+}
+.pmg-title {
+  font-family: 'Inter', sans-serif; font-weight: 900;
+  letter-spacing: -3px; fill: #FFFFFF;
+}
+.pmg-title .accent { fill: #1FE07E; }
+.pmg-eyebrow {
+  font-family: 'JetBrains Mono', monospace; font-weight: 500; font-size: 14px;
+  fill: rgba(31,224,126,0.65); letter-spacing: 3.5px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .pmg-cmd-group, .pmg-title-group, .pmg-cursor { animation: none; opacity: 1; -webkit-clip-path: none; clip-path: none; }
+  .pmg-glow-wrap { animation: none; }
+}
+
+/* ── ARTICLE LAYOUT ── */
+.hero { max-width: 760px; margin: 0 auto; padding: 55px 56px 34px; }
+.byline-row {
+  display: flex; gap: 21px; align-items: center;
+  font-family: var(--f-mono); font-size: 11px;
+  color: var(--output-45); letter-spacing: 0.1em; text-transform: uppercase;
+  margin-bottom: 34px;
+}
+.byline-tag { color: var(--signal); }
+.byline-divider { width: 1px; height: 12px; background: var(--output-12); }
+h1 { font-size: clamp(34px, 5vw, 60px); font-weight: 900; letter-spacing: -0.03em; line-height: 1.08; margin-bottom: 0; }
+h1 .accent { color: var(--signal); }
+
+article { max-width: 760px; margin: 0 auto; padding: 0 56px 89px; }
+.lede {
+  font-family: var(--f-serif); font-size: clamp(20px, 2.5vw, 26px);
+  font-weight: 300; line-height: 1.5; color: var(--output-65);
+  font-style: italic; padding-left: 28px; border-left: 2px solid var(--signal);
+  margin-bottom: 55px; margin-top: 34px;
+}
+h2 { font-size: clamp(24px, 3vw, 32px); font-weight: 800; letter-spacing: -0.02em; line-height: 1.2; margin: 55px 0 21px; }
+h2 .accent { color: var(--signal); }
+p { font-size: 18px; line-height: 1.8; color: var(--output-65); margin-bottom: 24px; font-weight: 300; }
+p strong { color: var(--output); font-weight: 500; }
+p .term { color: var(--signal); font-weight: 500; }
+
+.findings { list-style: none; padding: 0; margin: 21px 0 34px; }
+.findings li {
+  position: relative; padding: 21px 24px 21px 52px; margin-bottom: 8px;
+  background: var(--void-3); border: 1px solid var(--output-04); border-radius: 10px;
+  font-size: 17px; color: var(--output-65); line-height: 1.65; font-weight: 300;
+}
+.findings li::before {
+  content: '>_'; position: absolute; left: 18px; top: 21px;
+  font-family: var(--f-mono); font-size: 11px; color: var(--signal); font-weight: 700; opacity: 0.7;
+}
+.findings li strong { color: var(--output); font-weight: 500; }
+.findings li .stat { color: var(--signal); font-family: var(--f-mono); font-size: 15px; font-weight: 700; }
+
+.pullquote {
+  font-family: var(--f-serif); font-size: clamp(24px, 3.5vw, 36px);
+  font-weight: 400; font-style: italic; line-height: 1.3; color: var(--output);
+  margin: 55px 0; padding: 0 0 0 34px; border-left: 2px solid var(--signal);
+}
+.pullquote .accent { color: var(--signal); font-style: normal; font-weight: 500; }
+
+.citation-block {
+  margin: 34px 0; padding: 28px 34px;
+  background: var(--signal-dim); border-left: 2px solid var(--signal);
+  border-radius: 4px;
+}
+.citation-tag {
+  font-family: var(--f-mono); font-size: 10px;
+  color: var(--signal); letter-spacing: 0.2em; text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.citation-quote {
+  font-family: var(--f-serif); font-size: 19px; line-height: 1.5;
+  color: var(--output); font-style: italic; margin-bottom: 13px;
+}
+.citation-source {
+  font-family: var(--f-mono); font-size: 11px;
+  color: var(--output-45); letter-spacing: 0.08em;
+}
+
+.callout {
+  margin: 34px 0; padding: 28px 34px;
+  background: var(--signal-dim); border-left: 2px solid var(--signal);
+  border-radius: 4px;
+}
+.callout-tag {
+  font-family: var(--f-mono); font-size: 10px;
+  color: var(--signal); letter-spacing: 0.2em; text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.callout-body { font-family: var(--f-serif); font-size: 19px; line-height: 1.5; color: var(--output); font-style: italic; }
+
+.author-block {
+  margin-top: 55px; padding: 34px; border: 1px solid var(--output-04); border-radius: 16px; background: var(--void-3);
+  display: flex; gap: 28px; align-items: flex-start;
+}
+.author-mark { flex-shrink: 0; width: 56px; height: 56px; border-radius: 50%; background: var(--signal-dim); border: 1px solid var(--signal-line); display: flex; align-items: center; justify-content: center; font-family: var(--f-mono); font-weight: 700; color: var(--signal); }
+.author-info { font-size: 15px; }
+.author-name { color: var(--output); font-weight: 700; margin-bottom: 4px; font-size: 16px; }
+.author-role { font-family: var(--f-mono); font-size: 11px; color: var(--signal); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 13px; opacity: 0.85; }
+.author-bio { color: var(--output-65); line-height: 1.6; font-size: 14.5px; font-weight: 300; }
+
+.cta-footer { margin-top: 55px; padding: 55px 0; text-align: center; border-top: 1px solid var(--output-04); }
+.cta-footer h3 { font-size: clamp(22px, 3vw, 32px); font-weight: 800; letter-spacing: -0.02em; margin-bottom: 21px; }
+.cta-footer h3 .accent { color: var(--signal); }
+.cta-primary {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: var(--signal); color: var(--void); padding: 22px 56px;
+  border-radius: 100px; font-size: 16px; font-weight: 700;
+  transition: transform 200ms ease, background 200ms ease;
+}
+.cta-primary::after { content: '→'; transition: transform 200ms ease; }
+.cta-primary:hover { background: var(--signal-2); transform: translateY(-1px); }
+.cta-primary:hover::after { transform: translateX(4px); }
+
+footer {
+  padding: 34px 56px; border-top: 1px solid var(--output-04); text-align: center;
+  font-family: var(--f-mono); font-size: 11px; color: var(--output-30); letter-spacing: 0.12em;
+}
+footer .dot { color: var(--signal); }
+
+@media (max-width: 720px) {
+  .hero-motion { margin-top: 72px; padding: 0 16px; }
+  .hero { padding: 34px 24px 21px; }
+  article { padding: 0 24px 55px; }
+  footer { padding: 24px; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-left" aria-label="PRAGMA home">
+    <svg width="28" height="28" viewBox="0 0 240 240" aria-hidden="true">
+      <circle cx="120" cy="120" r="89" fill="none" stroke="#1FE07E" stroke-width="9"/>
+      <text x="120" y="148" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="86" font-weight="700" fill="#1FE07E" letter-spacing="-3">&gt;_</text>
+    </svg>
+    <div class="nav-wordmark">PRAGMA<span class="dot">.</span></div>
+  </a>
+  <a href="/thinking/" class="nav-back">Thinking</a>
+</nav>
+
+<!-- ══════════ HERO MOTION GRAPHIC ══════════ -->
+<div class="hero-motion" aria-label="PRAGMA · The Build. Day 19. Total Lawn Care case study.">
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" role="img">
+  <defs>
+    <radialGradient id="pmgGlowTlc" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1FE07E" stop-opacity="0.07"/>
+      <stop offset="70%" stop-color="#1FE07E" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect class="pmg-bg" width="1200" height="630"/>
+  <g class="pmg-glow-wrap">
+    <circle class="pmg-glow" cx="1050" cy="80" r="380"/>
+  </g>
+
+  <!-- Typed command: > run --audit=tlc.day19 -->
+  <g class="pmg-cmd-group">
+    <text class="pmg-cmd-text" x="100" y="265">&gt; run --audit=tlc.day19</text>
+  </g>
+  <text class="pmg-cursor" x="779" y="265">_</text>
+
+  <!-- Output title -->
+  <g class="pmg-title-group">
+    <text class="pmg-title" x="100" y="265" font-size="92">The Build.</text>
+    <text class="pmg-title" x="100" y="395" font-size="92"><tspan class="accent">Day 19.</tspan></text>
+  </g>
+
+  <!-- Eyebrow line (always visible) -->
+  <text class="pmg-eyebrow" x="100" y="560">&gt;_ THINKING · PRAGMA · FIRST CLIENT · 2026</text>
+</svg>
+</div>
+
+<!-- ══════════ ARTICLE HEADER ══════════ -->
+<header class="hero">
+  <div class="byline-row">
+    <span class="byline-tag">First client · Case study in progress</span>
+    <span class="byline-divider"></span>
+    <span>Jun 2026</span>
+    <span class="byline-divider"></span>
+    <span>5 min read</span>
+  </div>
+  <h1>The Build. <span class="accent">Day 19.</span></h1>
+</header>
+
+<!-- ══════════ ARTICLE BODY ══════════ -->
+<article>
+
+  <p class="lede">
+    Every PRAGMA engagement ships with a running system — not a report. This is the documentation of one. Total Lawn Care, Jacksonville FL. Day 19 of 30.
+  </p>
+
+  <h2>The <span class="accent">setup.</span></h2>
+
+  <p>
+    Total Lawn Care has been cutting commercial turf in Northeast Florida since 1985. Four decades of the same discipline: mowing, trimming, irrigation, installation, and maintenance for hospitals, municipalities, HOAs, and commercial accounts across the Jacksonville market. The Hawkinson family runs it — two generations in the same business, 45 operators out of Green Cove Springs.
+  </p>
+
+  <p>
+    Bob Hawkinson is PRAGMA's first external client. The relationship was built the way the right ones are built: between operators who understand what it costs to run a real business over a long time. PRAGMA's thesis has always been that <strong>the operating knowledge is the moat — not the technology.</strong> TLC is the proof of concept. What Bob has that can't be purchased is forty years of commercial landscape relationships in one of the fastest-growing metros in the Southeast. The technology is infrastructure. The knowledge is irreplaceable.
+  </p>
+
+  <p>
+    On Day 1, PRAGMA deployed nine agents on a dedicated M4 iMac at TLC's office. Those agents have been running for 19 days.
+  </p>
+
+  <h2>The <span class="accent">audit.</span></h2>
+
+  <p>
+    Before building anything new, PRAGMA audits what exists. You don't rip out a foundation before you understand what it's holding. Today — Day 19 — that audit is complete.
+  </p>
+
+  <p>Five findings. In plain language:</p>
+
+  <ul class="findings">
+    <li>
+      <strong>TLC ranks #1 for their money keyword.</strong> "Commercial lawn care Jacksonville FL" — first position. <span class="stat">#1.</span> That's a decade or more of domain authority accumulating in one place. You cannot buy it on Day 1 of a new site. It is the most valuable digital asset the business owns, and it would be trivial to damage it with a careless migration.
+    </li>
+    <li>
+      <strong>Their website loads in 16.5 seconds on a phone.</strong> Google's threshold for good performance is <span class="stat">2.5 seconds</span>. TLC's site loads in <span class="stat">16.5</span>. That is not a content problem — the content is fine. It's a bloat problem: accumulated plugin residue from years of WordPress updates that nobody cleaned out. This is the single biggest lever in the build. Fix the speed, and rankings improve without changing a word.
+    </li>
+    <li>
+      <strong>They rank #10 in their own hometown.</strong> TLC is headquartered in Green Cove Springs. They rank tenth for local searches in the town their trucks leave from every morning. The fix is mechanical: one dedicated service-area page written for that geography. It will rank within 30 days of going live.
+    </li>
+    <li>
+      <strong>The Agri-Community doesn't exist online.</strong> TLC recently opened a nursery operation — the Agri-Community. The URL returns a 404. The project has no pages, no signals, no traffic. This is a new revenue line with zero digital presence.
+    </li>
+    <li>
+      <strong>15 Yelp reviews.</strong> TLC has served Mayo Clinic. They've maintained municipal contracts across Clay County for decades. They have the kind of client roster that takes forty years to build. They have <span class="stat">15 Yelp reviews</span>. This is a reputation gap that runs directly counter to what the business has earned in the real world.
+    </li>
+  </ul>
+
+  <p>
+    None of these findings are catastrophic. One of them — the speed problem — is a 48-hour fix with material consequences. The rest are content and presence gaps that a structured build closes one by one.
+  </p>
+
+  <div class="pullquote">
+    40 years of domain authority isn't something you buy. It's also not something you migrate carelessly.
+  </div>
+
+  <h2>What this means for <span class="accent">the build.</span></h2>
+
+  <p>
+    The audit changes the sequencing.
+  </p>
+
+  <p>
+    The new website was always part of the plan. But a new website takes time to get right — Bob approves every page before it goes live, and that's the correct approach. You don't ship a new front door without the owner walking through it. What the audit surfaced is a set of fixes that can go live before the new site is finished: the speed repair, the Green Cove Springs service page, the Agri-Community buildout, and a review velocity protocol. Some of these will move rankings before the new site ever publishes.
+  </p>
+
+  <div class="callout">
+    <div class="callout-tag">build sequencing</div>
+    <p class="callout-body">
+      Backend fixes go live as we complete them. The new website doesn't launch until Bob approves it. The rankings don't wait.
+    </p>
+  </div>
+
+  <p>
+    Scout, Lens, Atlas, and Pulse are already running on Bob's iMac. They're watching competitors, monitoring the web, staging briefs. The moment Bob grants access to Google Search Console and Google Business Profile, those agents wire into real data — actual ranking positions, click-through rates, search impressions, review velocity. Until then, they're working from public signals. The infrastructure is live. The data access follows.
+  </p>
+
+  <h2>The thesis in <span class="accent">practice.</span></h2>
+
+  <div class="citation-block">
+    <div class="citation-tag">In the record</div>
+    <p class="citation-quote">"You cannot learn about this stuff through a series of YouTube videos or even in a classroom."</p>
+    <div class="citation-source">Euan Blair, CEO Multiverse · Bloomberg · June 2026</div>
+  </div>
+
+  <p>
+    He's right. And that's the point. Bob Hawkinson doesn't need to learn AI. He has run a commercial landscape operation in Northeast Florida for four decades. He knows his market, his crew, and what it takes to win and keep a commercial account. PRAGMA's job is to build the system around that knowledge — not hand him a tool and a tutorial.
+  </p>
+
+  <p>
+    Day 30 delivers a running operating system: a repaired website with correct performance metrics, four new pages in the index, a review velocity protocol in motion, and nine agents monitoring the business around the clock. The Flock doesn't stop when Bob is on-site. The rankings don't drift because nobody checked. The competitor intelligence doesn't go stale because the week got busy.
+  </p>
+
+  <p>
+    The full case study publishes at Day 90 — with before-and-after numbers on rankings, traffic, load time, and review count. That's when the proof is complete.
+  </p>
+
+  <p>
+    This is Day 19.
+  </p>
+
+  <div class="author-block">
+    <div class="author-mark">&gt;_</div>
+    <div class="author-info">
+      <div class="author-name">PRAGMA</div>
+      <div class="author-role">A Hartley Capital Company</div>
+      <div class="author-bio">PRAGMA installs AI operating systems on small and mid-sized businesses. Built on a 40-year operator before it was sold to anyone. TLC Total Lawn Care is the first external client. The full case study publishes at Day 90.</div>
+    </div>
+  </div>
+
+  <div class="cta-footer">
+    <h3>If this is the shape of engagement you've been looking for, <span class="accent">the application is here.</span></h3>
+    <a href="/apply/" class="cta-primary">Apply</a>
+  </div>
+
+</article>
+
+<footer>
+  PRAGMA<span class="dot">.</span> · A Hartley Capital Company · 2026 · prag-ma.ai
+</footer>
+
+<script defer src="/web-vitals.js"></script>
+</body>
+</html>
