@@ -2,8 +2,8 @@
 /* prag-ma.ai */
 
 # THE FIRM
-PRAGMA — a Hartley Capital company.
-An AI deployment firm. We install Frontier Firm Operating Systems on
+PRAGMA — an AI deployment firm.
+We install Frontier Firm Operating Systems on
 small and mid-sized businesses. Live in thirty days; evolved on retainer.
 
 # OPERATING MODEL
@@ -17,7 +17,7 @@ The eight PRAGMA Operators that built and run this site:
   - Scout — research lead / due diligence
 Plus the Construct's brand-review, content-creation, design-system, and ux-copy skills.
 Every page was authored against the locked tagline:
-  We don't write the plan. We run it.
+  Installed, tuned, owned by you.
 
 # RESEARCH SPINE
 - Lakhani et al. (HBS, 2025) — The Cybernetic Teammate

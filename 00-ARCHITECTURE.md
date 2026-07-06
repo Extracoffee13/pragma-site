@@ -162,7 +162,7 @@ Sections (in scroll order):
 5. **The research** — HBS / Microsoft / Lakhani institutional spine. One paragraph, citation-dense.
 6. **The shape of an engagement** — Four phases in 30 days. Brief.
 7. **Apply** — Manufactured scarcity ("Currently considering N applications for [next quarter]"). Single CTA.
-8. **Footer** — minimal. Mark, prag-ma.ai, "A Hartley Capital company", year.
+8. **Footer** — minimal. Mark, prag-ma.ai, year.
 
 ### `/apply` (Application questionnaire)
 Goal: feels like applying to YC or Harvard, not filling out a contact form. Bobby reviews each application personally; questionnaire produces enough signal to score against the Frontier Firm Readiness rubric (see `02-client-discovery-questionnaire.md`).
@@ -180,7 +180,7 @@ First three posts (templates ready):
 Each post page: hero, body (long-form, 1500-2500 words), pull quotes, citations, author byline, FAQ schema block, related posts.
 
 ### `/about`
-Bobby's operating record (30+ years), Hartley Capital parent attribution, the relationship between HC and PRAGMA, the team of one (Robert + the Construct), HBS AI Institute affiliation.
+Bobby's operating record (30+ years), PRAGMA standalone entity, the relationship between PRAGMA and B9, the team of one (Robert + the Construct), HBS AI Institute affiliation.
 
 Includes:
 - Author markup (Schema.org Person)
@@ -221,7 +221,7 @@ This page exists because Google + AI search engines want depth. A 2,000-word aut
 | Page | Schema types |
 |---|---|
 | Home | Organization, WebSite, BreadcrumbList |
-| /about | Person (Robert Hartley), Organization (PRAGMA, HC) |
+| /about | Person (Robert Hartley), Organization (PRAGMA, Brand 9 Signs) |
 | /the-operating-system | Service, FAQPage, BreadcrumbList |
 | /thinking/[post] | Article, Person (author), BreadcrumbList, FAQPage (if Q&A) |
 | /apply | WebPage, BreadcrumbList |
@@ -364,7 +364,7 @@ Reusable components that compose the entire site:
 - Right: links to /thinking, /the-operating-system, /about, /apply (apply is CTAPrimary-style)
 
 ### `<FooterMinimal />` — the footer
-- 60px height, single line: PRAGMA. mark, "A Hartley Capital company", prag-ma.ai, year. Nothing else.
+- 60px height, single line: PRAGMA. mark, prag-ma.ai, year. Nothing else.
 
 ### `<SchemaJSON />` — invisible per-page JSON-LD
 - Inserted in `<head>`, page-type appropriate

@@ -92,7 +92,7 @@ If you'd rather use a different backend (Basin, Web3Forms, DreamHost's own form 
 ## Post-deploy expectations
 
 - **Day 0–2:** Google starts crawling. Sitemap submitted. Pages indexed within a week typically.
-- **Day 7–14:** First branded searches ("PRAGMA Hartley Capital") return the site in top results.
+- **Day 7–14:** First branded searches ("PRAGMA AI") return the site in top results.
 - **Month 1–2:** Long-tail keyword rankings begin ("Frontier Firm Operating System", "AI deployment SMB"). AI search engines (ChatGPT, Claude, Perplexity) start citing the OS deep-dive page.
 - **Month 3–6:** First inbound applications from organic search + AI-search citation. Track via Formspree submissions tagged by "How did you hear about PRAGMA?".
 

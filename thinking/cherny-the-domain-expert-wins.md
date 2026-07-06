@@ -37,7 +37,7 @@ That is the PRAGMA Operator OS. It installs in 14-30 days. It runs on your hardw
 
 The acquisition multiple on an analog business compresses when the operator-buyer can deploy AI on top of the operator-seller's domain knowledge faster than a software-first competitor can hire the engineering to compete.
 
-Hartley Capital's thesis, written in one sentence: *Buy the domain expert. Install the agentic OS. Compound the moat that doesn't commoditize.*
+PRAGMA's thesis, written in one sentence: *Buy the domain expert. Install the agentic OS. Compound the moat that doesn't commoditize.*
 
 Cherny just said the same thing from the vendor side.
 
